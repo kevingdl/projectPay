@@ -1,0 +1,40 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example.js",
+  "scripts": {
+    "Login:qa": "cross-env SelectEnv=qa npx playwright test 01.Login.spec.js --headed",
+    "GroupLogic:qa": "cross-env SelectEnv=qa npx playwright test 02.GroupLogic.spec.js",
+    "Transactions:qa": "cross-env SelectEnv=qa npx playwright test 03.AssignRejectPayments.spec.js --headed",
+    "Returns:qa": "cross-env SelectEnv=qa npx playwright test 04.Returns.spec.js --headed",
+    "ReturnsManual:qa": "cross-env SelectEnv=qa npx playwright test 05.ReturnsManual.spec.js",
+    "TwoUsers:qa": "cross-env SelectEnv=qa npx playwright test 06.TwoUsersErrMsgAndSkip.spec.js",
+    "CashMgt:qa": "cross-env SelectEnv=qa npx playwright test 07.CashManagement.spec.js",
+    "RunAll:qa": "npm run Login:qa && npm run GroupLogic:qa && npm run Transactions:qa && npm run Returns:qa && npm run ReturnsManual:qa && npm run TwoUsers:qa",
+    "Regression:qa": "cross-env SelectEnv=qa npx playwright test",
+    "-------------": "-----------------------------------------------------------------------------------------",
+    "Login:uat": "cross-env SelectEnv=uat npx playwright test 01.Login.spec.js",
+    "GroupLogic:uat": "cross-env SelectEnv=uat npx playwright test 02.GroupLogic.spec.js",
+    "Transactions:uat": "cross-env SelectEnv=uat npx playwright test 03.AssignRejectPayments.spec.js --headed",
+    "Returns:uat": "cross-env SelectEnv=uat npx playwright test 04.Returns.spec.js",
+    "ReturnsManual:uat": "cross-env SelectEnv=uat npx playwright test 05.ReturnsManual.spec.js",
+    "TwoUsers:uat": "cross-env SelectEnv=uat npx playwright test 06.TwoUsersErrMsgAndSkip.spec.js --headed",
+    "CashMgt:uat": "cross-env SelectEnv=uat npx playwright test 07.CashManagement.spec.js",
+    "--------------": "----------------------------------------------------------------------------------------",
+    "Login:edc": "cross-env SelectEnv=edc npx playwright test 01.Login.spec.js --headed",
+    "GroupLogic:edc": "cross-env SelectEnv=qa npx playwright test 02.GroupLogic.spec.js",
+    "Transactions:edc": "cross-env SelectEnv=qa npx playwright test 03.AssignRejectPayments.spec.js --headed",
+    "Returns:edc": "cross-env SelectEnv=qa npx playwright test 04.Returns.spec.js --headed",
+    "ReturnsManual:edc": "cross-env SelectEnv=uat npx playwright test 05.ReturnsManual.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.1",
+    "@types/node": "^20.11.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3"
+  }
+}
